@@ -1,5 +1,11 @@
 import React from 'react';
-const Hello  = (props:any) =>{
+interface IHelloProps {
+    message?:string
+}
+const Hello:React.FunctionComponent<IHelloProps>  = (props:IHelloProps) =>{
     return <h2>{props.message}</h2>
+}
+Hello.defaultProps = {
+    message:'hello world'
 }
 export default Hello
